@@ -2,10 +2,15 @@
 
 import { useRouter } from 'next/navigation';
 import { useEffect } from 'react';
+import dynamic from 'next/dynamic';
 import { useAuth } from '@/lib/auth-context';
 import { SidebarNav, NavItem } from '@/components/sidebar-nav';
-import { DistrictMap } from '@/components/district-map';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+
+const DistrictMap = dynamic(() => import('@/components/district-map').then(mod => ({ default: mod.DistrictMap })), {
+  ssr: false,
+  loading: () => <div className="w-full h-96 bg-muted animate-pulse rounded-lg" />
+});
 
 export default function MapPage() {
   const router = useRouter();

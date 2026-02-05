@@ -201,59 +201,6 @@ export default function TrafficPage() {
               </div>
             </CardContent>
           </Card>
-
-          {/* Traffic Management Recommendations Section */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-8">
-            {/* Immediate Actions */}
-            <Card className="bg-card border-border">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <span className="text-destructive">⚡</span> Immediate Actions
-                </CardTitle>
-                <CardDescription>Deploy these now to reduce congestion</CardDescription>
-              </CardHeader>
-              <CardContent className="space-y-3">
-                <div className="p-4 bg-destructive/5 rounded-lg border border-destructive/20 space-y-2">
-                  <div className="flex items-start justify-between">
-                    <div>
-                      <h4 className="font-semibold text-sm text-foreground">Smart Traffic Signals</h4>
-                      <p className="text-xs text-muted-foreground mt-1">Implement adaptive traffic lights at Ooty Town Center junction that adjust duration based on real-time vehicle count</p>
-                    </div>
-                    <span className="text-xs bg-destructive text-destructive-foreground px-2 py-1 rounded-full whitespace-nowrap">Priority 1</span>
-                  </div>
-                  <div className="text-xs text-muted-foreground pt-2">Impact: Reduce peak hour congestion by 25-30%</div>
-                </div>
-
-                <div className="p-4 bg-orange-50 rounded-lg border border-orange-200 space-y-2">
-                  <div className="flex items-start justify-between">
-                    <div>
-                      <h4 className="font-semibold text-sm text-foreground">One-Way Traffic Flow</h4>
-                      <p className="text-xs text-muted-foreground mt-1">Establish one-way routes during peak hours (12:00-14:00) on Main Road to improve vehicle flow efficiency</p>
-                    </div>
-                    <span className="text-xs bg-orange-700 text-white px-2 py-1 rounded-full whitespace-nowrap">Priority 2</span>
-                  </div>
-                  <div className="text-xs text-muted-foreground pt-2">Impact: Reduce congestion by 18-22%</div>
-                </div>
-
-                <div className="p-4 bg-yellow-50 rounded-lg border border-yellow-200 space-y-2">
-                  <div className="flex items-start justify-between">
-                    <div>
-                      <h4 className="font-semibold text-sm text-foreground">Entry Point Restrictions</h4>
-                      <p className="text-xs text-muted-foreground mt-1">Divert incoming vehicles to alternate routes (Coonoor Road) during peak congestion times</p>
-                    </div>
-                    <span className="text-xs bg-yellow-700 text-white px-2 py-1 rounded-full whitespace-nowrap">Priority 2</span>
-                  </div>
-                  <div className="text-xs text-muted-foreground pt-2">Impact: Reduce core area congestion by 20%</div>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Long-Term Solutions */}
-           
-          </div>
-
-          {/* Traffic Police Support Features */}
-          
         </div>
       </main>
     </div>

@@ -89,16 +89,16 @@ export function DistrictMap({ onSpotSelect }: DistrictMapProps) {
   const mapRef = useRef<L.Map | null>(null);
   const markersRef = useRef<Map<string, L.Marker>>(new Map());
 
-  // Nilgiris region center and bounds
-  const mapCenter: [number, number] = [11.4066, 76.7050];
-  const mapBounds = L.latLngBounds(
-    L.latLng(11.35, 76.65),
-    L.latLng(11.45, 76.85)
-  );
-
   // Initialize Leaflet map
   useEffect(() => {
     if (!mapRef.current) {
+      // Nilgiris region center and bounds - must be initialized inside useEffect
+      const mapCenter: [number, number] = [11.4066, 76.7050];
+      const mapBounds = L.latLngBounds(
+        L.latLng(11.35, 76.65),
+        L.latLng(11.45, 76.85)
+      );
+
       const map = L.map('leaflet-map', {
         maxBounds: mapBounds,
         maxBoundsViscosity: 1.0,
